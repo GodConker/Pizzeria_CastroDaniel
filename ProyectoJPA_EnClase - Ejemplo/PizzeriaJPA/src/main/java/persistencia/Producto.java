@@ -4,6 +4,8 @@
 package persistencia;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -40,6 +42,15 @@ public class Producto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
+
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ProductoVenta> productoVentas = new ArrayList<>();
+
+// Método para agregar ProductoVenta
+    public void addProductoVenta(ProductoVenta productoVenta) {
+        productoVentas.add(productoVenta);
+        productoVenta.setProducto(this);
+    }
 
     public Long getId() {
         return id;
