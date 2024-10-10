@@ -5,6 +5,7 @@
     <class>persistencia.Producto</class>
     <class>persistencia.Ingrediente</class>
     <class>persistencia.TipoIngrediente</class>
+    <class>persistencia.Venta</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pizzeria_bda"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

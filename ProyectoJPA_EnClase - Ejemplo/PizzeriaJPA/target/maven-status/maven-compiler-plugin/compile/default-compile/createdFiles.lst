@@ -1,4 +1,8 @@
+dao\VentaDAO.class
+persistencia\Venta.class
+dao\IngredienteDAO.class
+persistencia\Ingrediente.class
 persistencia\TipoIngrediente.class
 com\mycompany\pizzeriajpa\PizzeriaJPA.class
-persistencia\Ingrediente.class
+dao\ProductoDAO.class
 persistencia\Producto.class

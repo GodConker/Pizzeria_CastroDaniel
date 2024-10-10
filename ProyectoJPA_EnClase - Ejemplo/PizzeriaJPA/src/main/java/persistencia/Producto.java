@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package persistencia;
 
@@ -33,12 +33,10 @@ public class Producto implements Serializable {
         this.descripcion = descripcion;
         this.precio = precio;
     }
-    
-    
 
     private static final long serialVersionUID = 1L;
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
@@ -50,7 +48,7 @@ public class Producto implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -74,7 +72,7 @@ public class Producto implements Serializable {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-    
+
     private String nombre;
     private String descripcion;
     private float precio;
@@ -101,7 +99,11 @@ public class Producto implements Serializable {
 
     @Override
     public String toString() {
-        return "persistencia.Producto[ id=" + id + " ]";
+        return "Producto { "
+                + "nombre='" + nombre + '\''
+                + ", descripcion='" + descripcion + '\''
+                + ", precio=" + precio
+                + " }";
     }
-    
+
 }

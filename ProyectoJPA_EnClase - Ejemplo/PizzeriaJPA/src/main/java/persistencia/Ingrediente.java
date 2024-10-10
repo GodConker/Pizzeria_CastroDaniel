@@ -94,8 +94,12 @@ public class Ingrediente implements Serializable {
     }
 
     @Override
-    public String toString() {
-        return "persistencia.Ingrediente[ id=" + id + " ]";
-    }
+public String toString() {
+    return "Ingrediente { " +
+            "nombre = '" + nombre + '\'' +
+            ", cantidad = " + cantidad +
+            ", tipoIngrediente = " + tipo.getDescripcion() + // Si deseas mostrar el nombre del tipo de ingrediente
+            " }";
+}
     
 }
